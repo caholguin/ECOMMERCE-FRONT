@@ -5,6 +5,7 @@ import { OnInit } from '@angular/core';
 import { LayoutService } from '../services/layout.service';
 import { AppMenuitemComponent } from '../menuitem/menuitem.component';
 
+
 @Component({
   selector: 'app-menu',
   standalone: true,
@@ -23,28 +24,15 @@ export class MenuComponent implements OnInit {
       {
           label: 'Home',
           items: [
-              { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
+              { label: 'Familias', icon: 'inventory_2', routerLink: ['/'] },
+              { label: 'Categorias', icon: 'category', routerLink: ['/g'] },
+              { label: 'SubCategorias', icon: 'label_important', routerLink: ['/g'] },
+              { label: 'Opciones', icon: 'settings', routerLink: ['/gg'] },
+              { label: 'Productos', icon: 'inventory', routerLink: ['/g'] },
+              { label: 'Caracteristicas', icon: 'featured_play_list', routerLink: ['/g'] },
           ]
-      },
-      {
-          label: 'UI Components',
-          items: [
-              { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/httyy'] },
-              { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/thyyy'] },
-           
-          ]
-      },     
-      {
-          label: 'Get Started',
-          items: [
-              {
-                  label: 'Documentation', icon: 'pi pi-fw pi-question', routerLink: ['']
-              },
-              {
-                  label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/primefaces/sakai-ng'], target: '_blank'
-              }
-          ]
-      }
+      }     
+      
   ];
   }
 

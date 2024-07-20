@@ -18,8 +18,9 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
       <div *ngIf="root && item.visible !== false" class="layout-menuitem-root-text">{{item.label}}</div>
       <a *ngIf="(!item.routerLink || item.items) && item.visible !== false" [attr.href]="item.url" (click)="itemClick($event)"
          [ngClass]="item.class" [attr.target]="item.target" tabindex="0" pRipple>
-        <i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
-        <span class="layout-menuitem-text">{{item.label}}</span>
+         <span class="material-symbols-outlined layout-menuitem-icon">{{item.icon}}</span>
+        <!-- <i [ngClass]="item.icon" class="layout-menuitem-icon"></i> -->
+        <span class="layout-menuitem-text layout-menuitem-icon">{{item.label}}</span>
         <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
       </a>
       <a *ngIf="(item.routerLink && !item.items) && item.visible !== false" (click)="itemClick($event)" [ngClass]="item.class" 
@@ -27,7 +28,8 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
          [fragment]="item.fragment" [queryParamsHandling]="item.queryParamsHandling" [preserveFragment]="item.preserveFragment" 
          [skipLocationChange]="item.skipLocationChange" [replaceUrl]="item.replaceUrl" [state]="item.state" [queryParams]="item.queryParams"
          [attr.target]="item.target" tabindex="0" pRipple>
-        <i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
+       <!--  <i [ngClass]="item.icon" class="layout-menuitem-icon"></i> -->
+        <span class="material-symbols-outlined layout-menuitem-icon">{{item.icon}}</span>
         <span class="layout-menuitem-text">{{item.label}}</span>
         <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
       </a>
