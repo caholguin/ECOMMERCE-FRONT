@@ -1,20 +1,22 @@
-import { Component, ViewChild, OnDestroy, Renderer2, } from '@angular/core';
-import { TopbarComponent } from './topbar/topbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
-import { filter, Subscription } from 'rxjs';
-import { LayoutService } from './services/layout.service';
 import { CommonModule } from '@angular/common';
+import { Component, Renderer2, ViewChild } from '@angular/core';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
+
+import { filter, Subscription } from 'rxjs';
+import { SidebarComponent } from '../shared/sidebar/sidebar.component';
+import { TopbarComponent } from '../shared/topbar/topbar.component';
+import { LayoutService } from '../services/layout.service';
+import { FooterComponent } from '../shared/footer/footer.component';
+
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-pages',
   standalone: true,
-  imports: [CommonModule,RouterModule, TopbarComponent, SidebarComponent, FooterComponent,DashboardComponent],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  imports: [CommonModule,RouterModule, TopbarComponent, SidebarComponent, FooterComponent],
+  templateUrl: './pages.component.html',
+  styleUrl: './pages.component.scss'
 })
-export class DashboardComponent {
+export class PagesComponent {
 
   overlayMenuOpenSubscription: Subscription;
 
