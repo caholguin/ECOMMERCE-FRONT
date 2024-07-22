@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, Renderer2, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { TopbarComponent } from '../dashboard/topbar/topbar.component';
-import { SidebarComponent } from '../dashboard/sidebar/sidebar.component';
-import { FooterComponent } from '../dashboard/footer/footer.component';
+
 import { filter, Subscription } from 'rxjs';
-import { LayoutService } from '../dashboard/services/layout.service';
+import { SidebarComponent } from '../shared/sidebar/sidebar.component';
+import { TopbarComponent } from '../shared/topbar/topbar.component';
+import { LayoutService } from '../services/layout.service';
+import { FooterComponent } from '../shared/footer/footer.component';
+
 
 @Component({
   selector: 'app-pages',

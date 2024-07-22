@@ -3,8 +3,8 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { LayoutService } from '../services/layout.service';
-import { MenuService } from '../services/menu.service';
+import { LayoutService } from '../../services/layout.service';
+import { MenuService } from '../../services/menu.service';
 import { CommonModule } from '@angular/common';
 
 

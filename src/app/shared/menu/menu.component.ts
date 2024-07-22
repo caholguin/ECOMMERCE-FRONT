@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { OnInit } from '@angular/core';
-import { LayoutService } from '../services/layout.service';
+import { LayoutService } from '../../services/layout.service';
 import { AppMenuitemComponent } from '../menuitem/menuitem.component';
 
 
@@ -24,6 +24,7 @@ export class MenuComponent implements OnInit {
       {
           label: 'Home',
           items: [
+              { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
               { label: 'Familias', icon: 'inventory_2', routerLink: ['/'] },
               { label: 'Categorias', icon: 'category', routerLink: ['/g'] },
               { label: 'SubCategorias', icon: 'label_important', routerLink: ['/g'] },
