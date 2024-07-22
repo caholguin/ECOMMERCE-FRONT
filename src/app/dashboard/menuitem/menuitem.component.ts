@@ -1,18 +1,18 @@
-import { ChangeDetectorRef, Component, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { LayoutService } from '../services/layout.service';
 import { MenuService } from '../services/menu.service';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: '[app-menuitem]',
     standalone: true,
-    imports: [RouterModule,NgFor, NgIf,NgClass],   
+    imports: [CommonModule,RouterModule],   
     template: `
 		  <ng-container>
       <div *ngIf="root && item.visible !== false" class="layout-menuitem-root-text">{{item.label}}</div>

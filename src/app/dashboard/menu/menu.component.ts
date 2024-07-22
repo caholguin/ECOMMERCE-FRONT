@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { LayoutService } from '../services/layout.service';
@@ -9,7 +9,7 @@ import { AppMenuitemComponent } from '../menuitem/menuitem.component';
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [NgFor, NgIf,RouterModule,AppMenuitemComponent],
+  imports: [CommonModule,RouterModule,AppMenuitemComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })

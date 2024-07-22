@@ -5,12 +5,12 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { filter, Subscription } from 'rxjs';
 import { LayoutService } from './services/layout.service';
-import { NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterModule, TopbarComponent, SidebarComponent, FooterComponent,NgClass,DashboardComponent],
+  imports: [CommonModule,RouterModule, TopbarComponent, SidebarComponent, FooterComponent,DashboardComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
