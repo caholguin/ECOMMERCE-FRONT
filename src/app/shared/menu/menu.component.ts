@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
           label: 'Home',
           items: [
               { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
-              { label: 'Familias', icon: 'inventory_2', routerLink: ['/'] },
+              { label: 'Familias', icon: 'inventory_2', routerLink: ['/familias'] },
               { label: 'Categorias', icon: 'category', routerLink: ['/g'] },
               { label: 'SubCategorias', icon: 'label_important', routerLink: ['/g'] },
               { label: 'Opciones', icon: 'settings', routerLink: ['/gg'] },
