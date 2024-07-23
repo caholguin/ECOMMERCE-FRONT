@@ -1,4 +1,7 @@
 import { Routes } from '@angular/router';
-import { PagesComponent } from './pages.component';
 
 
+export const adminRoutes: Routes = [ 
+    { path: '', loadComponent: () => import('./familias/familias.component').then((c) => c.FamiliasComponent) },
+    { path: ':id', loadComponent: () => import('./familias/familias.component').then((c) => c.FamiliasComponent) },
+];
